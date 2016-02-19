@@ -1,10 +1,20 @@
-FROM alpine
+FROM azukiapp/alpine:3.3
 
-RUN apk add --update git vim curl wget ca-certificates
-RUN apk add php php-cli php-json php-pdo php-openssl php-pdo_mysql php-dev php-pear php-curl php-mcrypt php-phar php-phalcon
-RUN rm -rf /var/cache/apk/*
+RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories;
 
-RUN sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php/php.ini && \
-    sed -i 's/display_errors=0/display_errors=1/g' /etc/php/php.ini
-
-EXPOSE 8000
+RUN apk add --update php \
+    php-cli \
+    php-pdo \
+    php-pdo_sqlite \
+    php-pdo_mysql \
+    php-pdo_pgsql \
+    php-redis@testing \
+    php-memcached@testing \
+    php-json \
+    php-openssl \
+    php-dev \
+    php-curl \
+    php-mcrypt \
+    php-phar \
+    php-xdebug@testing \
+    && rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
