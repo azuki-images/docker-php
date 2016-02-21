@@ -1,4 +1,6 @@
-FROM azukiapp/alpine:3.3
+FROM alpine:3.3
+
+MAINTAINER Ricardo Quintaniha <ricardo.aquintanilha@gmail.com>
 
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories;
 
@@ -18,3 +20,6 @@ RUN apk add --update php \
     php-phar \
     php-xdebug@testing \
     && rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
+
+RUN sed -i 's/display_errors = Off/display_errors = On/g' /etc/php/php.ini \
+    && sed -i 's/extension/zend_extension/g' /etc/php/conf.d/xdebug.ini
