@@ -23,3 +23,6 @@ RUN apk add --update php \
 
 RUN sed -i 's/display_errors = Off/display_errors = On/g' /etc/php/php.ini \
     && sed -i 's/extension/zend_extension/g' /etc/php/conf.d/xdebug.ini
+
+RUN /usr/bin/php -r "readfile('https://getcomposer.org/installer');" | \
+    /usr/bin/php -- --install-dir=/usr/local/bin --filename=composer
