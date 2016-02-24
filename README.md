@@ -36,10 +36,12 @@ systems({
       "composer install"
     ],
     workdir: "/azk/#{manifest.dir}",
-    command: "php -S 0.0.0.0:80",
+    command: "php -S 0.0.0.0:80 -t /azk/#{manifest.dir}/public",
     wait: {"retry": 20, "timeout": 1000},
     mounts: {
       "/azk/#{manifest.dir}" : sync("."),
+      "/azk/#{manifest.dir}/vendor": persistent("./vendor"),
+      "/azk/#{manifest.dir}/composer.lock": path("./composer.lock"),
     },
     scalable: {"default": 1},
     http: {
@@ -96,13 +98,14 @@ $ azk logs my-app
 $ docker logs <CONTAINER_ID>
 ```
 
+## TODO
+- [ ] Add Makefile (like: https://github.com/azukiapp/docker-postgres/blob/master/Makefile)
+- [ ] Add tests with Azkfile (like: https://github.com/azukiapp/docker-postgres/)
+- [ ] Add automated deploy using CircleCI. (like: https://github.com/azukiapp/docker-postgres/blob/master/circle.yml#L39-L45)
+
 ## License
 
-"Azuki", "azk" and the Azuki logo are Copyright 2013-2016 Azuki Serviços de Internet LTDA.
-
-**azk** source code is released under [Apache 2 License][LICENSE].
-
-Check LEGAL and LICENSE files for more information.
+Azuki Dockerfiles distributed under the [Apache License][license].
 
 [azk]: http://azk.io
 [alpine-packages]: http://pkgs.alpinelinux.org/
@@ -112,4 +115,3 @@ Check LEGAL and LICENSE files for more information.
 
 [issues]: https://github.com/azukiapp/docker-php/issues
 [license]: https://github.com/azukiapp/docker-php/blob/master/LICENSE
-
