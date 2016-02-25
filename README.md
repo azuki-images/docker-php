@@ -1,16 +1,16 @@
-[azukiapp/php](http://images.azk.io/#/php)
+[azuki-images/php](http://images.azk.io/#/php)
 ==================
 
 Base docker image to run **PHP** applications in [`azk`][azk]
 
-[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/azukiapp/php/latest.svg?style=plastic)][imageslayers]
-[![ImageLayers Layers](https://img.shields.io/imagelayers/layers/azukiapp/php/latest.svg?style=plastic)][imageslayers]
+[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/azuki-images/php/latest.svg?style=plastic)][imageslayers]
+[![ImageLayers Layers](https://img.shields.io/imagelayers/layers/azuki-images/php/latest.svg?style=plastic)][imageslayers]
 
 PHP Versions (tags)
 ---
 
 <versions>
-- [`latest`, `5.6`](https://github.com/azukiapp/docker-php/blob/master/5.6/Dockerfile)
+- [`latest`, `5.6`](https://github.com/azuki-images/php/blob/master/5.6/Dockerfile)
 </versions>
 
 ### Usage with `azk`
@@ -28,7 +28,7 @@ systems({
     // Dependent systems
     depends: [], // postgres, mysql, mongodb ...
     // More info about php image: http://images.azk.io/#/php?from=images-azkfile-php
-    image: {"docker": "azukiapp/php:5.6"},
+    image: {"docker": "azuki-images/php:5.6"},
     // or use Dockerfile to custimize your image
     //image: {"dockerfile": "./Dockerfile"},
     // Steps to execute before running instances
@@ -64,7 +64,7 @@ Install more packages:
 
 ```dockerfile
 # Dockerfile
-FROM azukiapp/php:5.6
+FROM azuki-images/php:5.6
 
 # install internationalization functions
 RUN  apk add --update php-intl \
@@ -74,7 +74,7 @@ RUN  apk add --update php-intl \
 To build the image:
 
 ```sh
-$ docker build -t azukiapp/php:5.6 .
+$ docker build -t azuki-images/php:5.6 .
 ```
 
 To more packages, access [alpine packages][alpine-packages]
@@ -84,7 +84,7 @@ To more packages, access [alpine packages][alpine-packages]
 To run the image and bind to port 80:
 
 ```sh
-$ docker run -it --name my-app -p 80:80 -v "$PWD":/myapp -w /myapp azukiapp/php:5.6
+$ docker run -it --name my-app -p 80:80 -v "$PWD":/myapp -w /myapp azuki-images/php:5.6
 ```
 
 Logs
@@ -110,8 +110,8 @@ Azuki Dockerfiles distributed under the [Apache License][license].
 [azk]: http://azk.io
 [alpine-packages]: http://pkgs.alpinelinux.org/
 
-[circle-ci]: https://circleci.com/gh/azukiapp/docker-php
-[imageslayers]: https://imagelayers.io/?images=azukiapp/php:latest
+[circle-ci]: https://circleci.com/gh/azuki-images/php
+[imageslayers]: https://imagelayers.io/?images=azuki-images/php:latest
 
-[issues]: https://github.com/azukiapp/docker-php/issues
-[license]: https://github.com/azukiapp/docker-php/blob/master/LICENSE
+[issues]: https://github.com/azuki-images/php/issues
+[license]: https://github.com/azuki-images/php/blob/master/LICENSE
