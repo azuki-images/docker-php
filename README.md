@@ -27,8 +27,8 @@ systems({
   "php": {
     // Dependent systems
     depends: [], // postgres, mysql, mongodb ...
-    // More info about php image: http://images.azk.io/#/php?from=images-azkfile-php
-    image: {"docker": "azuki-images/php:5.6"},
+    // More info about php image: http://images.azk.io/#/azuki-images/php?from=images-azkfile-php
+    image: {"docker": "azukiapp/php:5.6"},
     // or use Dockerfile to custimize your image
     //image: {"dockerfile": "./Dockerfile"},
     // Steps to execute before running instances
@@ -99,7 +99,7 @@ $ docker logs <CONTAINER_ID>
 ```
 
 ## TODO
-- [ ] Add Makefile (like: https://github.com/azukiapp/docker-postgres/blob/master/Makefile)
+- [x] Add Makefile (like: https://github.com/azukiapp/docker-postgres/blob/master/Makefile)
 - [ ] Add tests with Azkfile (like: https://github.com/azukiapp/docker-postgres/)
 - [ ] Add automated deploy using CircleCI. (like: https://github.com/azukiapp/docker-postgres/blob/master/circle.yml#L39-L45)
 
