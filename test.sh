@@ -24,9 +24,7 @@ run_test() {
   export PHPTEST_VERSION=${VERSION}
   echo "Run tests to php ${VERSION}"
   echo
-  azk start php
   azk shell php -c "sh test.sh"
-  azk stop php
 }
 
 # Helps
