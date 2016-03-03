@@ -100,7 +100,7 @@ $ docker logs <CONTAINER_ID>
 
 ## TODO
 - [x] Add Makefile (like: https://github.com/azukiapp/docker-postgres/blob/master/Makefile)
-- [ ] Add tests with Azkfile (like: https://github.com/azukiapp/docker-postgres/)
+- [x] Add tests with Azkfile (like: https://github.com/azukiapp/docker-postgres/)
 - [ ] Add automated deploy using CircleCI. (like: https://github.com/azukiapp/docker-postgres/blob/master/circle.yml#L39-L45)
 
 ## License

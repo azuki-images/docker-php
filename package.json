@@ -1,0 +1,16 @@
+{
+  "name": "azk-php-test",
+  "version": "0.0.1",
+  "description": "App to test http://images.azk.io/#/azuki-images/php",
+  "main": "index.js",
+  "dependencies": {
+    "mocha": "^1.5.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azuki-images/docker-php/"
+  },
+  "author": "Ricardo Quintanilha",
+  "license": "Apache 2.0"
+}
