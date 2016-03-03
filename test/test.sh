@@ -7,7 +7,7 @@ if [ ! "`php -v | grep "PHP ${PHP_VERSION_NEEDED}"`" ]; then
 fi
 
 # PHP should has some modules installed
-expected_modules="memcached PDO pdo_mysql pdo_pgsql pdo_sqlite redis xdebug"
+expected_modules="memcached PDO pdo_mysql pdo_pgsql pdo_sqlite redis xdebug json openssl curl mcrypt dom intl ctype gd dom intl ctype gd iconv xsl zip"
 installed_modules=`php -m`
 
 for module in $expected_modules; do

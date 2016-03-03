@@ -4,7 +4,7 @@ systems({
   php: {
     // More images:  http://images.azk.io
     image: { docker: "azukiapp/php:" + version },
-    shell: "/bin/ash",
+    shell: "/bin/bash",
     workdir: "/azk/#{manifest.dir}/test",
     wait: { "retry": 25, "timeout": 1000 },
     mounts: {
