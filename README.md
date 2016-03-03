@@ -99,11 +99,6 @@ $ azk logs my-app
 $ docker logs <CONTAINER_ID>
 ```
 
-## TODO
-- [x] Add Makefile (like: https://github.com/azukiapp/docker-postgres/blob/master/Makefile)
-- [x] Add tests with Azkfile (like: https://github.com/azukiapp/docker-postgres/)
-- [ ] Add automated deploy using CircleCI. (like: https://github.com/azukiapp/docker-postgres/blob/master/circle.yml#L39-L45)
-
 ## License
 
 Azuki Dockerfiles distributed under the [Apache License][license].
