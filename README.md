@@ -3,6 +3,7 @@
 
 Base docker image to run **PHP** applications in [`azk`][azk]
 
+[![Circle CI](https://circleci.com/gh/azukiapp/docker-elixir.svg?style=svg)][circle-ci]
 [![ImageLayers Size](https://img.shields.io/imagelayers/image-size/azukiapp/php/latest.svg?style=plastic)][imageslayers]
 [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/azukiapp/php/latest.svg?style=plastic)][imageslayers]
 
@@ -110,7 +111,7 @@ Azuki Dockerfiles distributed under the [Apache License][license].
 [azk]: http://azk.io
 [alpine-packages]: http://pkgs.alpinelinux.org/
 
-[circle-ci]: https://circleci.com/gh/azukiapp/php
+[circle-ci]: https://circleci.com/gh/azukiapp/docker-php
 [imageslayers]: https://imagelayers.io/?images=azukiapp/php:latest
 
 [issues]: https://github.com/azuki-images/php/issues
