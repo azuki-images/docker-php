@@ -28,7 +28,6 @@ machine:
 dependencies:
   cache_directories:
     - "~/.azk"
-    - "~/docker"
   override:
     - docker info
     - azk agent start --quiet
